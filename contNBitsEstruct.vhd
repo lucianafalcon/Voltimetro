@@ -32,6 +32,8 @@ begin
 
 	salOr <= rst_i or salComp;
 	
+	salAnd <= ena_i and salComp;
+	
 	salComp <= '1' when (unsigned(salReg) = MAX_COUNT) else '0';
 	maxCount <= salComp;
 	
